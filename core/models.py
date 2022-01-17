@@ -5,9 +5,15 @@ from django.db import models
 class Professions(models.Model):
     des=models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.des
+
 class DataSheet(models.Model):
     des=models.CharField(max_length=50)
     historical_data=models.TextField()
+
+    def __str__(self):
+        return self.des
 
 
 class Customer(models.Model):
